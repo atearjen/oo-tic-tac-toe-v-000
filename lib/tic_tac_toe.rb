@@ -108,7 +108,7 @@ def over?()
   end
 end
 
-def winner(board)
+def winner()
   win_indices = won?()
   if !win_indices
     return nil
