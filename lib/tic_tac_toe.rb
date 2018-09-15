@@ -58,6 +58,8 @@ class TicTacToe
 
   def current_player
 
+  end
+
   def turn(board)
     puts "Please enter 1-9:"
     input = gets.strip
@@ -70,7 +72,7 @@ class TicTacToe
     end
   end
 
-  
+
 
   def display_board
     puts " #{board[0]} | #{board[1]} | #{board[2]} "
