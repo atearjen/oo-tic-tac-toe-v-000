@@ -73,11 +73,9 @@ class TicTacToe
       player_move(board,index,current_player())
       display_board()
     else
-      turn(board)
+      turn()
     end
   end
-
-
 
   def display_board
     puts " #{board[0]} | #{board[1]} | #{board[2]} "
