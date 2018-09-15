@@ -100,6 +100,26 @@ def draw?()
     return false
   end
 end
+def over?()
+  if won?() || draw?() || full?(board)
+    return true
+  else
+    return false
+  end
+end
+
+def winner(board)
+  win_indices = won?()
+  if !win_indices
+    return nil
+  end
+  index = win_indices[0]
+  if board[index] == "X"
+    return "X"
+  elsif board[index] == "O"
+    return "O"
+  end
+end
 
   def display_board
     puts " #{board[0]} | #{board[1]} | #{board[2]} "
