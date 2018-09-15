@@ -38,7 +38,7 @@ class TicTacToe
     @board[index] = token
   end
 
-  def position_taken?
+  def position_taken?(board,index)
     !(board[index].nil? || board[index] == " ")
   end
   def turn(board)
