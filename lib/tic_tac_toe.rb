@@ -44,12 +44,12 @@ class TicTacToe
 
   def valid_move?(index)
     if index <= 8 && index >= 0
-    if (position_taken?(board,index) == false)
-      return true
+      if (position_taken?(board,index) == false)
+        return true
+      end
+    else
+      return false
     end
-  else
-    return false
-  end
   end
 
   def turn(board)
