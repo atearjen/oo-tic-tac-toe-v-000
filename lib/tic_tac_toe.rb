@@ -129,4 +129,23 @@ end
     puts " #{board[6]} | #{board[7]} | #{board[8]} "
   end
 
+  def play(board)
+    counter = 0
+    while counter < 9
+      if over?(board)
+        break
+      end
+      # binding.pry
+      turn(board)
+      counter += 1
+    end
+
+    if won?(board)
+      champ = winner(board)
+      puts "Congratulations #{champ}!"
+    elsif draw?(board)
+      puts "Cat's Game!"
+    end
+  end
+
 end
